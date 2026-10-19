@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta name="description" content="노원구의 축제, 공연, 전시, 가족 프로그램과 접수 일정을 한눈에 확인하세요.">
+  <title>노원, 지금 뭐하지? — 우리 동네 일정 안내</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> 노원에서 이번 주, 놓치지 말아야 할 소식 <span class="announcement-date" id="today-label"></span></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="노원, 지금 뭐하지? 홈"><span class="brand-mark">N</span><span>노원, <strong>지금 뭐하지?</strong></span></a>
+    <nav aria-label="주요 메뉴"><a href="#events">일정 모아보기</a><a href="#quick-links">공식 채널</a><a class="submit-link" href="https://www.nowon.kr/www/index.do" target="_blank" rel="noreferrer">노원구청 ↗</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span>NOWON</span> 우리 동네 생활 레이더</p>
+        <h1>오늘 노원에서<br><em>뭐 하지?</em></h1>
+        <p class="hero-intro">축제부터 전시, 가족 프로그램까지.<br>노원의 오늘과 다음 약속을 한곳에 모았어요.</p>
+        <a class="hero-cta" href="#events">이번 달 일정 보기 <span>↓</span></a>
+        <p class="updated">공식 홈페이지 기준 · 2026년 10월 19일 확인</p>
+      </div>
+      <div class="hero-art" aria-label="노원에서 열리는 가을 행사들을 표현한 그래픽">
+        <div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div>
+        <div class="moon-card"><span>NOWON<br>OCT—NOV</span><b>우리 동네<br>가을 산책</b><i>행복은 가까이에</i></div>
+        <span class="spark spark-one">✳</span><span class="spark spark-two">✦</span>
+        <span class="art-caption">SEOUL · NOWON-GU</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="이번 주 추천 일정"><div class="ticker-label">THIS WEEK</div><div class="ticker-content">당현천 빛조각축제 <b>·</b> 10.25 동 마을축제 <b>·</b> 10.31 노원반함 <b>·</b> 10.31 가족 문화예술축제</div></section>
+
+    <section class="section events-section" id="events">
+      <div class="section-heading"><div><p class="eyebrow">YOUR NEIGHBORHOOD, THIS MONTH</p><h2>이번 달 노원 일정</h2><p class="section-subtitle">관심 있는 분야를 고르고, 공식 안내에서 자세한 내용을 확인하세요.</p></div><span class="event-count" id="event-count"></span></div>
+      <div class="toolbar"><div class="filters" role="group" aria-label="일정 종류 필터">
+        <button class="filter active" data-filter="all">전체</button><button class="filter" data-filter="축제">축제</button><button class="filter" data-filter="공연">공연</button><button class="filter" data-filter="전시">전시</button><button class="filter" data-filter="가족·체험">가족·체험</button>
+      </div><label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="행사나 장소 검색" aria-label="행사나 장소 검색"></label></div>
+      <div class="event-grid" id="event-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>조건에 맞는 일정이 없어요. 다른 검색어나 분야를 선택해 보세요.</p>
+    </section>
+
+    <section class="weekend-band">
+      <div class="weekend-date"><span>MARK YOUR CALENDAR</span><strong>10.25 <i>—</i> 10.31</strong></div>
+      <div class="weekend-copy"><h2>이번 주말, 동네에서 만나요</h2><p>마을축제부터 반려동물 축제까지, 주말을 채워줄 노원 일정이 있어요.</p></div>
+      <a href="#events">일정 살펴보기 <span>↗</span></a>
+      <div class="weekend-flower" aria-hidden="true">✳</div>
+    </section>
+
+    <section class="section quick-section" id="quick-links">
+      <div class="section-heading"><div><p class="eyebrow">OFFICIAL SOURCES</p><h2>새 소식은 여기서</h2><p class="section-subtitle">일정 변경과 신청 마감은 주최 기관의 공지를 한 번 더 확인해 주세요.</p></div></div>
+      <div class="source-grid">
+        <a class="source-card" href="https://www.nowon.kr/www/index.do" target="_blank" rel="noreferrer"><span class="source-icon">NW</span><span><b>노원구청 통합 안내</b><small>공지 · 온라인 접수 · 축제</small></span><span class="arrow">↗</span></a>
+        <a class="source-card" href="https://www.nowonarts.kr/" target="_blank" rel="noreferrer"><span class="source-icon lilac">ART</span><span><b>노원문화재단</b><small>공연 · 전시 · 축제</small></span><span class="arrow">↗</span></a>
+        <a class="source-card" href="https://nowon.kr/math/main" target="_blank" rel="noreferrer"><span class="source-icon yellow">π</span><span><b>노원수학문화관</b><small>가족 체험 · 강연 · 전시</small></span><span class="arrow">↗</span></a>
+      </div>
+    </section>
+    <aside class="notice"><span class="notice-icon">i</span><p><b>방문 전 한 번 더 확인해 주세요.</b> 이 페이지는 주민을 위한 비공식 일정 모음입니다. 행사 시간·장소·접수 여부는 날씨나 주최 측 사정으로 바뀔 수 있어요. 카드의 공식 안내 링크에서 최신 내용을 확인해 주세요.</p></aside>
+  </main>
+  <footer><a class="brand footer-brand" href="#top"><span class="brand-mark">N</span><span>노원, <strong>지금 뭐하지?</strong></span></a><span>노원에서 보내는 하루가 더 즐겁도록.</span><span>© 2026 NOWON, WHAT'S ON</span></footer>
+</body>
+</html>
